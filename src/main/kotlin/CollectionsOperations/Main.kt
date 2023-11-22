@@ -39,4 +39,19 @@ fun main() {
             valueTransform = { it.length })
     ) //{O=3, T=5, F=4}
 
+    //=========== Flatten =======================
+    val numbersSets = arrayOf(arrayOf(1, 2, 3), arrayOf(4, 5, 6), arrayOf(7, 8, 9))
+    val numberSets = listOf(setOf(1, 2, 3), setOf(4, 5, 6), setOf(7, 8, 9))
+    //println(numbersSets[2][2]) //9
+    for (numbers in numberSets) {
+        for (number in numbers) {
+            print("$number ")
+        }
+        println()
+    }
+
+    val numbersFlatten = numberSets.flatten()
+
+    println(numbersFlatten)
+
 }
