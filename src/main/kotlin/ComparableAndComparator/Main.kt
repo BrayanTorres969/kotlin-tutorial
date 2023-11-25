@@ -31,7 +31,7 @@ fun main() {
     println()
     laptops2.sortedBy { it.ram }.forEach { println(it) }
     println()
-    laptops2.sortedWith(compareBy<Laptop> { it.year }.thenBy { it.price })
+    laptops2.sortedWith(compareBy<Laptop> { it.year }.thenBy { it.price }).forEach { println(it) }
 
 }
 
